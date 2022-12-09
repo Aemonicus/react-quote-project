@@ -1,4 +1,4 @@
-const FIREBASE_DOMAIN = 'https://react-prep-default-rtdb.firebaseio.com';
+const FIREBASE_DOMAIN = 'https://food-app-cbada-default-rtdb.europe-west1.firebasedatabase.app';
 
 export async function getAllQuotes() {
   const response = await fetch(`${FIREBASE_DOMAIN}/quotes.json`);
@@ -13,7 +13,7 @@ export async function getAllQuotes() {
   for (const key in data) {
     const quoteObj = {
       id: key,
-      ...data[key],
+      ...data[ key ],
     };
 
     transformedQuotes.push(quoteObj);
@@ -86,7 +86,7 @@ export async function getAllComments(quoteId) {
   for (const key in data) {
     const commentObj = {
       id: key,
-      ...data[key],
+      ...data[ key ],
     };
 
     transformedComments.push(commentObj);
